@@ -1,1 +1,1 @@
-include ':app', ':testlibrary'
+include ':app', ':labelviewlib'
