@@ -3,4 +3,6 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_view_group_sample">ViewGroupSampleActivity</string>
+    <string name="title_activity_recyclerview_sample">RecyclerviewSampleActivity</string>
 </resources>

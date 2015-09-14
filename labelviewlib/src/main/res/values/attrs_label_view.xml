@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LabelView">
+        <attr name="label_distance" format="dimension" />
+        <attr name="label_position" format="enum">
+            <enum name="TOP_LEFT" value="0" />
+            <enum name="TOP_RIGHT" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

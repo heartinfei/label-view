@@ -1,25 +1,22 @@
 package com.wq.labelviewsample;
 
-import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class ViewGroupSampleActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_view_group_sample);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_view_group_sample, menu);
         return true;
     }
 
@@ -36,20 +33,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.button1:
-                startActivity(new Intent(this, ViewGroupSampleActivity.class));
-                break;
-//            case R.id.button2:
-//                startActivity(new Intent(this, ViewGroupSampleActivity.class));
-//                break;
-            case R.id.button3:
-                startActivity(new Intent(this, RecyclerviewSampleActivity.class));
-                break;
-        }
     }
 }

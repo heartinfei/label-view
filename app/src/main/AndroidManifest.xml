@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ViewGroupSampleActivity"
+            android:label="@string/title_activity_view_group_sample" >
+        </activity>
+        <activity
+            android:name=".RecyclerviewSampleActivity"
+            android:label="@string/title_activity_recyclerview_sample" >
+        </activity>
     </application>
 
 </manifest>
