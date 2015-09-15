@@ -50,6 +50,7 @@ public class LabelView extends TextView {
         distance = a.getDimension(R.styleable.LabelView_label_distance, 0);
         position = a.getInt(R.styleable.LabelView_label_position, 0);
         style = a.getInt(R.styleable.LabelView_label_type, 0);
+        a.recycle();
     }//end init
 
     @Override
