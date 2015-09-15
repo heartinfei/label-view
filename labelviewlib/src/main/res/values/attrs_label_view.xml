@@ -6,5 +6,9 @@
             <enum name="TOP_LEFT" value="0" />
             <enum name="TOP_RIGHT" value="1" />
         </attr>
+        <attr name="label_type" format="enum">
+            <enum name="TYPE_RIBBON" value="0" />
+            <enum name="TYPE_NORMAL" value="1" />
+        </attr>
     </declare-styleable>
 </resources>

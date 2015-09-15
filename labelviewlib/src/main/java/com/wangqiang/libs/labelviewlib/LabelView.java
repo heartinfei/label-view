@@ -13,6 +13,7 @@ import android.widget.TextView;
 public class LabelView extends TextView {
     protected float distance = 0;
     protected int position = 0;
+    protected int style = 1;
 
     public LabelView(Context context) {
         super(context);
@@ -31,15 +32,16 @@ public class LabelView extends TextView {
     }
 
 
-    protected void setUpLabel(){
+    protected void setUpLabel() {
         setRotation(position == 0 ? -45 : 45);
-        setTranslationY(distance);
-        float tranX;
+        float tranX = getWidth() / 2 - distance - getHeight() / 2;
+        float offset = getHeight() / 8.0f;
         if (position == 0) {
-            tranX = -(getWidth() / 2 - distance - getHeight() / 2);
+            tranX = style == 0 ? -tranX : -tranX - offset;
         } else {
-            tranX = getWidth() / 2 - distance - getHeight() / 2;
+            tranX = style == 0 ? tranX : tranX + offset;
         }
+        setTranslationY(style == 0 ? distance : -offset);
         setTranslationX(tranX);
     }
 
@@ -47,6 +49,7 @@ public class LabelView extends TextView {
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.LabelView, defStyle, 0);
         distance = a.getDimension(R.styleable.LabelView_label_distance, 0);
         position = a.getInt(R.styleable.LabelView_label_position, 0);
+        style = a.getInt(R.styleable.LabelView_label_type, 0);
     }//end init
 
     @Override
