@@ -21,28 +21,29 @@ public class LabelView extends TextView {
 
     public LabelView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setGravity(Gravity.CENTER);
+        setGravity(Gravity.CENTER_HORIZONTAL);
         init(context, attrs, 0);
     }
 
     public LabelView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        setGravity(Gravity.CENTER);
+        setGravity(Gravity.CENTER_HORIZONTAL);
         init(context, attrs, defStyle);
     }
 
 
     protected void setUpLabel() {
-        setRotation(position == 0 ? -45 : 45);
         float tranX = getWidth() / 2 - distance - getHeight() / 2;
-        float offset = getHeight() / 8.0f;
+        float offset = (float) (getHeight() / 2.0f / Math.sqrt(2));
         if (position == 0) {
-            tranX = style == 0 ? -tranX : -tranX - offset;
+            tranX = style == 0 ? -tranX : -(getWidth() / 2) + offset;
         } else {
-            tranX = style == 0 ? tranX : tranX + offset;
+            tranX = style == 0 ? tranX : getWidth() / 2 - offset;
         }
-        setTranslationY(style == 0 ? distance : -offset);
+        float tranY = style == 0 ? distance : -getHeight() / 2 + offset;
+        setTranslationY(tranY);
         setTranslationX(tranX);
+        setRotation(position == 0 ? -45 : 45);
     }
 
     protected void init(Context context, AttributeSet attrs, int defStyle) {
