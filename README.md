@@ -14,6 +14,6 @@
 <p>Easily reference the library in your Android projects using this dependency in your module's <code>build.gradle</code> file:</p>
 
 <div class="highlight highlight-source-groovy-gradle"><pre><span class="pl-en">dependencies</span> {
-    compile <span class="pl-s"><span class="pl-pds">'</span>com.wangqiang.libs:labelviewlib:1.0.1<span class="pl-pds">'</span></span>
+    compile <span class="pl-s"><span class="pl-pds">'</span>com.wangqiang.libs:labelviewlib:1.0.2<span class="pl-pds">'</span></span>
 }</pre></div>
 详情请参考示例程序
